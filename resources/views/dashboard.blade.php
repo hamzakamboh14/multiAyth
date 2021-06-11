@@ -35,8 +35,8 @@
                             </div>
                         </div>
                     </td>
-                    <td><a class="btn btn-success" href="{{route('edit.post')/$data['id']}}">Update</a></td>
-                    <td><a class="btn btn-danger" href="{{route('delete.post')/$data['id']}}">Delete</a></td>
+                    <td><a class="btn btn-success" href="{{route('edit.post',$data['id'])}}">Update</a></td>
+                    <td><a class="btn btn-danger" href="{{route('delete.post',$data['id'])}}">Delete</a></td>
                 <tr>
                     @endforeach
             </tbody>
@@ -51,7 +51,7 @@
         @endif
         @if(session()->has('post'))
         <div class="col-md-6">   
-            <form method="Post" action="{{route('update.post')/Session::get('post')->id}}" enctype="multipart/form-data">
+            <form method="Post" action="{{route('update.post',Session::get('post')->id)}}" enctype="multipart/form-data">
             <h1 style="font-size:50px;margin-bottom:10px;">Update Record</h1>
                 @csrf
                 <div class="form-group">

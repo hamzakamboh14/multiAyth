@@ -38,7 +38,7 @@
                         </div>
                     </td>
                     <!-- <td><a class="btn btn-success" href="/admin/edit/{{$data['id']}}">Update</a></td> -->
-                    <td><a class="btn btn-danger" href="={{route('destroy.admin')/$data['id']}}">Delete</a></td>
+                    <td><a class="btn btn-danger" href="={{route('destroy.admin',$data['id'])}}">Delete</a></td>
                 <tr>
                     @endforeach
             </tbody>

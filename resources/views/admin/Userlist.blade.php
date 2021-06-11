@@ -35,7 +35,7 @@
                     </td>
                     <td>{{$user_list['utype']}}</td>
                     <!-- <td><a class="btn btn-success" href="/admin/edit/{{$user_list['id']}}">Update</a></td> -->
-                    <td><a class="btn btn-danger" href="{{route('destroy.user')/$user_list['id']}}">Delete</a></td>
+                    <td><a class="btn btn-danger" href="{{route('destroy.user',$user_list['id'])}}">Delete</a></td>
                 <tr>
                     @endforeach
             </tbody>
